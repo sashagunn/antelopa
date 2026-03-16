@@ -47,7 +47,7 @@ export function Hero() {
           <div className="aspect-square bg-soft-green rounded-[3rem] overflow-hidden relative z-10 p-3 sm:p-5 border-8 border-white dark:border-slate-800 shadow-2xl">
             <div className="absolute inset-0 bg-primary/20 z-0"></div>
             <img 
-              src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=800&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" 
               alt="Children engaging in development activities" 
               className="w-full h-full object-cover relative z-10"
             />
