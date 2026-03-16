@@ -12,11 +12,11 @@ export function SectionHeader({ titleHtml, subtitle, centered = true }: SectionH
   return (
     <div className={`mb-16 ${centered ? 'text-center' : ''} max-w-3xl ${centered ? 'mx-auto' : ''}`}>
       <h2 
-        className="text-4xl md:text-5xl lg:text-6xl text-primary-dark mb-6 text-balance leading-tight"
+        className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6 text-balance leading-tight"
         dangerouslySetInnerHTML={{ __html: titleHtml }}
       />
       {subtitle && (
-        <p className="text-lg md:text-xl text-text-muted text-balance max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 text-balance max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
       )}

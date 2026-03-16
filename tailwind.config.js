@@ -7,33 +7,41 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: {
-          DEFAULT: '#FDFBF7', // Very light, warm cream (main background)
-          alt: '#F8F5EE', // Slightly off-white for sections
-        },
-        primary: {
-          DEFAULT: '#6B7A6A', // Muted sage/olive green (like original but warmer)
-          dark: '#4A4138', // Deep warm charcoal/brown instead of harsh blue
-          light: '#EBE9DD', // Very soft sage/greige tint
-        },
+        primary: "#8b5e3c",
         accent: {
-          terracotta: '#D17C43', // The distinctive burnt orange/ochre from reference
-          peach: '#F4D4BA', // Soft peach/tan for subtle badge backgrounds
+          DEFAULT: "#e27036", // Terracotta
+          peach: "#d97706"    // Amber
+        },
+        background: {
+          light: "#ffffff",
+          alt: "#fffcf5",     // Cream
+          dark: "#1a1614"     // Charcoal
+        },
+        soft: {
+          green: "#e8f5e9",
+          cream: "#fff9f2"
         },
         text: {
-          main: '#3D3D3D', // Soft off-black
-          muted: '#73706A', // Warm gray
-          terracotta: '#CC7A42', // Same as accent but explicitly for text
+          main: "#1e293b",    // slate-800
+          muted: "#64748b"    // slate-500
         }
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ["Montserrat", "sans-serif"],
+        sans: ["Nunito", "sans-serif"],
+        comfortaa: ["Comfortaa", "cursive"]
       },
       borderRadius: {
-        '4xl': '2rem',
-        '5xl': '3rem', // For the extreme pill-shaped top/bottoms seen in reference
-        'button': '9999px',
+        "DEFAULT": "0.5rem",
+        "lg": "1rem",
+        "xl": "1.5rem",
+        "2xl": "2rem",
+        "3xl": "2.5rem",
+        "4xl": "3rem",
+        "full": "9999px"
+      },
+      boxShadow: {
+        "card": "0 10px 25px -5px rgba(139, 94, 60, 0.1)"
       }
     },
   },

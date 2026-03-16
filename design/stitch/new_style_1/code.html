@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+                "primary": "#d97706", // Muted brown/amber
+                "accent-peach": "#fef3c7",
+                "accent-green": "#f0fdf4",
+                "background-light": "#fffcf5", // Soft cream
+                "background-dark": "#2d2a26",
+                "charcoal": "#4a443f"
+            },
+            fontFamily: {
+              "display": ["Comfortaa", "cursive"],
+              "sans": ["Nunito", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1rem",
+              "xl": "1.5rem",
+              "2xl": "2.5rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Nunito', sans-serif; }
+        h1, h2, h3, h4, .font-display { font-family: 'Comfortaa', cursive; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+        .watercolor-blob {
+            filter: blur(40px);
+            opacity: 0.4;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-slate-100 antialiased">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Logo" class="w-10 h-10 rounded-full object-cover border-2 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz37brH82Usfh2unkaXHefDH5DWWRRP7ilAFYzVpQEiGVj_Ee9odYvKjpocKnn6-WoXL3TDUgYjR3BNxwyfyilwuyQdXJIszQraB9rpqR79vuaPlyzuCTGplfGgWJxmwju--8MNKw98Cbn7QAXlzScMTBi1VVlDKtAg9z4hgNwrbh7L8fejFXaKNjnUEOLt2FYEjFEgSYBZD0oci2fu8xPs1qt-XU5DCMByoFYzQdKA-4EM4w9mN3sSYsa7mpIWSlSfZTurpWciAI"/>
+<h1 class="text-lg font-bold tracking-tight text-primary uppercase">Antelopa</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-sm font-bold tracking-wide">
+<a class="hover:text-primary transition-colors" href="#">Главная</a>
+<a class="hover:text-primary transition-colors" href="#">О нас</a>
+<a class="hover:text-primary transition-colors" href="#">Программа</a>
+<a class="hover:text-primary transition-colors" href="#">Галерея</a>
+<a class="hover:text-primary transition-colors" href="#">Контакты</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-xs font-bold tracking-widest text-slate-500">
+<span class="hover:text-primary cursor-pointer">EN</span>
+<span class="text-slate-300">|</span>
+<span class="text-primary">RU</span>
+</div>
+<button class="hidden lg:block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg transition-all">
+                Записаться
+            </button>
+<span class="material-symbols-outlined md:hidden cursor-pointer">menu</span>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-12 pb-20 md:pt-24 md:pb-32">
+<!-- Watercolor Background Decoration -->
+<div class="absolute top-20 right-0 w-96 h-96 bg-amber-200 watercolor-blob -z-10 rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-green-100 watercolor-blob -z-10 rounded-full"></div>
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-peach text-primary text-xs font-bold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm">favorite</span>
+                    Бутик-детский сад в Калифорнии
+                </div>
+<h1 class="text-4xl md:text-6xl font-display leading-[1.2] text-charcoal dark:text-slate-100">
+                    Воспитание <span class="text-primary italic">любознательных умов</span> в гармонии
+                </h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
+                    Пространство, где французская элегантность встречается с методом Монтессори. Мы создаем теплую, домашнюю атмосферу для первых открытий вашего ребенка.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-xl transition-all transform hover:scale-[1.02]">
+                        Записаться на экскурсию
+                    </button>
+<button class="bg-white dark:bg-slate-800 border-2 border-primary/10 text-charcoal dark:text-slate-100 px-8 py-4 rounded-full text-lg font-bold hover:bg-accent-peach/20 transition-all">
+                        Наша программа
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="aspect-square bg-accent-green rounded-[3rem] overflow-hidden relative z-10 p-4 border-8 border-white dark:border-slate-800 shadow-2xl">
+<img alt="Antelopa Character Illustration" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8UewVt5LGZuJbjzZfP1y2gj82oVYlwtch4DmFMcGFsZ6JHSq4FiVQXqUwTleSQhFL0vJTfZAlaEH9qOu_wJZHwnIpFsGb6DEphHg72VU0e8Ja5WMeyTGZXhv2KkixhnfSyNs9Ln8YSShkSOlLd16b6w-TH_jGfQFPuPjnrQNrZyaMNa8NvTNJ8W-A_tb0h_ZnqsS2ghY6XXbMGremeSyG2RL3BS5p7gxmHnvfrfqs_wnpE2ecNrAIVRVg9L13P1OzjL34sBw_bM4"/>
+</div>
+<!-- Character Badge -->
+<div class="absolute -bottom-10 -right-6 bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl z-20 flex items-center gap-4 border border-primary/5">
+<img alt="Happy child" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIk2ab0nRxxM6hS_h6kf7cD7T2UmRaUYh_-qPSbiHbUYGuIIQlIvPt-sUmY1NiB6i6UNxXlK2b41CTl927_OEx2OcI8Y0nO1w_teIHqanR4JYkT1T7NFwOhbgOrii3Xm7CoutbpMfFzWtTgVyWLKDqRIWFlANRdeMMa_NshLfIQzb5lF5LgCVb_hdis_sGkJEdYU7yigFhEN8w9kOnAqF9pnu7SS2DB1gPQ3Yq1KQ_U7NM2UodhlSyy4PcqeOtcZ6kAZDYJGUWEOA"/>
+<div>
+<p class="text-sm font-bold">120+ счастливых семей</p>
+<div class="flex text-amber-400 text-xs">
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+<span class="material-symbols-outlined fill-1 text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Families Choose Us -->
+<section class="py-24 bg-white dark:bg-background-dark/30">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Наши ценности</span>
+<h2 class="text-3xl md:text-4xl font-display font-bold">Островок заботы и развития</h2>
+<p class="text-slate-500 text-lg">Каждая деталь нашего пространства вдохновлена любовью к детям и стремлением к прекрасному.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-10 rounded-[2.5rem] bg-background-light dark:bg-slate-800 border border-primary/5 group hover:shadow-2xl hover:shadow-primary/5 transition-all">
+<div class="w-16 h-16 rounded-2xl bg-accent-peach text-primary flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">child_care</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Бережный подход</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">В небольших группах дети чувствуют себя спокойно, получают максимум внимания и индивидуального подхода.</p>
+</div>
+<div class="p-10 rounded-[2.5rem] bg-accent-green/50 dark:bg-slate-800 border border-primary/5 group hover:shadow-2xl hover:shadow-primary/5 transition-all">
+<div class="w-16 h-16 rounded-2xl bg-white text-green-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Натуральная среда</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">Мы используем органические материалы и деревянные игрушки Монтессори для развития тактильных ощущений.</p>
+</div>
+<div class="p-10 rounded-[2.5rem] bg-background-light dark:bg-slate-800 border border-primary/5 group hover:shadow-2xl hover:shadow-primary/5 transition-all">
+<div class="w-16 h-16 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Домашнее питание</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">У нас в меню всегда свежая выпечка, кашки и фрукты. Готовим сами — как дома, с любовью и пользой.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Character Illustration Block -->
+<section class="py-12 px-6 overflow-hidden">
+<div class="max-w-5xl mx-auto bg-accent-peach/30 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 relative">
+<div class="flex-1 space-y-6">
+<h2 class="text-3xl font-display font-bold leading-snug">Интересные факты о нас 💡</h2>
+<ul class="space-y-4 text-lg">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">brush</span>
+<span>Ежедневные творческие занятия по возрасту</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">library_books</span>
+<span>Чтение сказок и изучение стишков</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">music_note</span>
+<span>Музыка, ритмика и танцы</span>
+</li>
+</ul>
+<div class="pt-4 flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">radio_button_checked</span>
+<span>Запись открыта! Места ограничены.</span>
+</div>
+</div>
+<div class="flex-1">
+<img alt="Antelopa Character with Cart" class="w-full max-w-sm mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRA8uvstfiyw6Tnnh2oNF0Eau6U2PfpWA3d2YHSmLW1fzFbzhrkkv_AqhOMhOXOH2di5Bd_j13-a7qA-u_Mq_4U78r6bPwNTd3y8n5jeRREsKZ-3Hvj_LDOBIhcR97cpnlzGbQQ8Mqbg84o4yoUaQVCxWL_tVRIvvzA7TQEYs5_YtwbMyVLa7JauRQ289geOHk7jNXqzZOzF87AuDh5fCeK7GpjPnIVw-1E7XtF1HHs2i4M_QwVVVnhnVFWq1q_U1rYMsc7TskZhg"/>
+</div>
+<!-- Decorative Motif -->
+<div class="absolute -top-6 -left-6 w-20 h-20 opacity-20">
+<span class="material-symbols-outlined text-8xl text-primary">favorite</span>
+</div>
+</div>
+</section>
+<!-- Gallery Snippet -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-display font-bold mb-4">Уютный мир Antelopa</h2>
+<p class="text-slate-500">Загляните в нашу атмосферу спокойствия и открытий.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
+                Смотреть все фото <span class="material-symbols-outlined">arrow_outward</span>
+</a>
+</div>
+<div class="max-w-7xl mx-auto px-6 flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+<div class="min-w-[280px] md:min-w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden snap-center shadow-lg">
+<img alt="Interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj8IUw0L7ieRnpIeXA3UIehCC-PZAR2M1JgezxeKCwKW1d449NOrHDWIUbAZF2YzWjc6vVBYjeZ7PFeTDLoUW0JZp6_E5t1LZN3JC5TB0J2OgIO4FrliiTfdAMAESuAZiu_9j6SRqMSnpufLtJuLBp6BTvFhOnuFkY-maZ99-lzVq15Dd31Ewe-6Fs9F3QDNJ1a-yAYo6lObDy-Cq8IrH9CUOGi0i7y5WsKFxbwXiBsUDO8RteBDrmmhLvl_FXXrXxfHudo9rodL0"/>
+</div>
+<div class="min-w-[280px] md:min-w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden snap-center shadow-lg">
+<img alt="Details" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaiaG4CKz9X1M-V5wJZ4AjDe9iMe-LfUwg8e4Q2qVdHV_ZhUdavaCrPORNs0SgQR5OxxxMIJpphGoqRo8MH7K_sg9xpA2Cuv0zfE7DpzuTHE2cFGST-5FVPE--tdafxO_ygksSX3N66z73Yh2wJLpkVknPMKgHVVCAZwPVl03lSDVPID3gwOMnLxBs-ln1LPynlq-KN4ybY4PVCjZKWMDwGjtRJPcJirFlWLvLMaBZhqWUFhxCuKeV8WkeJBiSglxne0oPQjbQWos"/>
+</div>
+<div class="min-w-[280px] md:min-w-[400px] aspect-[4/3] rounded-[2rem] overflow-hidden snap-center shadow-lg">
+<img alt="Outdoor" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Z2kiO3gXGEdxGB9HUDBss79PX9NRU9CwZwgoMOolfwswUzSOHdP6IoJAK2DRQPQhpHD4rXZDZom8zEGTK4DEmrhuIpbIeO-FFW-C9-lrXy4HpIDmwRyZo3UM0MIScfkw465SZA7ZSgXuljtS--APyLBlGYydPbOds0Ey8DCnv0jfMkhPRoMMi_H727Z_qBwlhwT_YFahw8YMZ1TSCE-DzpJlYZRwwdVOZcJ06vi5NJY4TR9WYgNIeZLKGKYEMrUPrgj_EfCcMxs"/>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-accent-green/30 dark:bg-slate-900/50 relative overflow-hidden">
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2 space-y-6">
+<span class="text-green-600 font-bold tracking-widest uppercase text-xs">Отзывы родителей</span>
+<h2 class="text-4xl font-display font-bold">Голоса нашего сообщества</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">Нам доверяют самое ценное. Мы гордимся тем, что становимся для детей вторым домом, полным открытий и тепла.</p>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl shadow-primary/5 relative">
+<span class="material-symbols-outlined absolute -top-4 -left-4 text-7xl text-primary/10">format_quote</span>
+<p class="text-charcoal dark:text-slate-300 italic text-lg leading-relaxed mb-8">
+                            «Садик Antelopa — это не просто образование, это про атмосферу. Ребенок идет сюда с радостью, а возвращается спокойным и вдохновленным. Огромное спасибо педагогам за их чуткость и любовь!»
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-accent-peach">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIk2ab0nRxxM6hS_h6kf7cD7T2UmRaUYh_-qPSbiHbUYGuIIQlIvPt-sUmY1NiB6i6UNxXlK2b41CTl927_OEx2OcI8Y0nO1w_teIHqanR4JYkT1T7NFwOhbgOrii3Xm7CoutbpMfFzWtTgVyWLKDqRIWFlANRdeMMa_NshLfIQzb5lF5LgCVb_hdis_sGkJEdYU7yigFhEN8w9kOnAqF9pnu7SS2DB1gPQ3Yq1KQ_U7NM2UodhlSyy4PcqeOtcZ6kAZDYJGUWEOA"/>
+</div>
+<div>
+<h5 class="font-bold text-lg">Сара Дженкинс</h5>
+<p class="text-sm text-slate-400">Мама Лео (4 года)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal text-white/70 py-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="md:col-span-2 space-y-8">
+<div class="flex items-center gap-2">
+<h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Antelopa</h2>
+</div>
+<p class="max-w-sm leading-relaxed text-lg italic">
+                «Воспитываем сердца и умы с нежностью и изяществом.»
+            </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-widest text-sm">Контакты</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">location_on</span>
+<span>123 Serenity Way,<br/>Santa Barbara, CA 93101</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">phone</span>
+<span>+1 (555) 010-8899</span>
+</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-white font-bold uppercase tracking-widest text-sm">Ссылки</h4>
+<ul class="space-y-3">
+<li><a class="hover:text-white transition-colors" href="#">О нас</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Программа</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Запись</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Блог</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-16 mt-16 border-t border-white/5 text-sm flex flex-col md:flex-row justify-between gap-4">
+<p>© 2024 Antelopa Preschool. Все права защищены.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Политика конфиденциальности</a>
+<a class="hover:text-white transition-colors" href="#">Условия</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 flex justify-around p-3 md:hidden z-40">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Главная</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px] font-bold">Учеба</span>
+</a>
+<button class="bg-primary text-white p-3 -mt-8 rounded-full shadow-lg border-4 border-white dark:border-slate-900">
+<span class="material-symbols-outlined">event</span>
+</button>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="text-[10px] font-bold">Галерея</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="text-[10px] font-bold">Инфо</span>
+</a>
+</div>
+<!-- Desktop Floating Button -->
+<div class="fixed bottom-8 right-8 z-50 hidden md:block">
+<button class="bg-primary text-white flex items-center gap-3 px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-transform font-bold group">
+<span class="material-symbols-outlined">edit_calendar</span>
+<span>Записаться на тур</span>
+</button>
+</div>
+</body></html>

@@ -44,7 +44,7 @@ export function PhotoReports() {
               href="#" 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-dark text-white rounded-xl hover:bg-primary transition-colors font-medium shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-white rounded-full hover:bg-accent/90 transition-colors font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               <Cloud className="w-5 h-5" />
               {t('photos.cloudLink', 'Open Cloud Gallery')}

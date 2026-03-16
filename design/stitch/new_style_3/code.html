@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8b5e3c",
+                        "accent": "#e27036",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a1614",
+                        "soft-green": "#e8f5e9",
+                        "soft-cream": "#fff9f2",
+                    },
+                    fontFamily: {
+                        "display": ["Montserrat", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Программы и мероприятия | Antelopa Preschool</title>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(139, 94, 60, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/5">
+<div class="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
+<div class="flex items-center gap-2">
+<div class="size-10 bg-primary/10 rounded-full flex items-center justify-center">
+<img alt="Logo" class="size-8 object-contain" onerror="this.src='https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/child_care/default/48px.svg'; this.style.filter='sepia(1) saturate(5) hue-rotate(330deg)'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8l7p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4X6p4"/>
+</div>
+<h1 class="text-lg font-bold tracking-tight text-primary">ANTELOPA</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hidden md:block bg-accent text-white px-6 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-accent/90 transition-all">
+                Записаться
+            </button>
+</div>
+</div>
+</header>
+<main class="max-w-screen-xl mx-auto pb-24">
+<!-- Hero Section -->
+<section class="px-6 pt-12 pb-8 text-center md:text-left">
+<h2 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4 leading-tight">Программы и мероприятия</h2>
+<p class="text-base text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+            Проводим ежедневные занятия согласно возраста: от сенсорного развития до подготовки к школе в уютной домашней атмосфере.
+        </p>
+</section>
+<!-- Age Group Selection Tabs -->
+<div class="px-6 mb-12">
+<div class="flex gap-4 overflow-x-auto no-scrollbar py-2">
+<button class="flex flex-col items-center justify-center bg-accent text-white rounded-2xl py-3 px-6 whitespace-nowrap shadow-md transition-all">
+<span class="text-sm font-bold">Младенцы</span>
+<span class="text-[10px] opacity-80">6 - 18 месяцев</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-100 dark:border-slate-700 rounded-2xl py-3 px-6 whitespace-nowrap hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold">Малыши</span>
+<span class="text-[10px] opacity-80">18 - 36 месяцев</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-100 dark:border-slate-700 rounded-2xl py-3 px-6 whitespace-nowrap hover:bg-slate-50 transition-colors">
+<span class="text-sm font-bold">Дошкольники</span>
+<span class="text-[10px] opacity-80">3 - 5 лет</span>
+</button>
+</div>
+</div>
+<!-- Featured Programs Grid -->
+<section class="px-6 mb-20">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Наши основные программы</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Program Card 1 -->
+<div class="group bg-soft-green/50 dark:bg-emerald-950/20 rounded-3xl overflow-hidden card-shadow transition-transform hover:-translate-y-1">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img alt="Гнездо заботы" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfOidMb0POWJ8mteAnXpeSqNkWBt2Buklg7Qdxaznqx18qmBHgwCJEj9Qm6iWDocaHy11QQusYcl5ZBLMRdeTMSzpVsViKEg9FTKV-xMzL3ZuQ__ivkG_5b0OqeimCzgJtW7__rThhulmt8kxM2p385xhBS1x2Y9Fr7xZt2rrDZ0lsxPaoRzU8v_wcUmQGB60nPI-o9-uIVVKiE50IuCmSdbdPZpf9y2aKk-NQa8L28OQljk0cqXs98gTXokQdS3zJM6e3t7lpZL4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h4 class="text-xl font-bold mb-1">Гнездо заботы</h4>
+<p class="text-sm opacity-90 line-clamp-2">Бережная среда, ориентированная на сенсорное исследование.</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-primary mb-3">
+<span class="material-symbols-outlined text-lg">baby_changing_station</span>
+<span class="text-xs font-bold uppercase tracking-wider">Развитие</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Формирование надежной привязанности для самых маленьких воспитанников.</p>
+</div>
+</div>
+<!-- Program Card 2 -->
+<div class="group bg-soft-cream dark:bg-amber-950/10 rounded-3xl overflow-hidden card-shadow transition-transform hover:-translate-y-1">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img alt="Путь открытий" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYSaF_IRzhFBVeDuWfK95CQOBqyLfZW32ObOJ52ZzzP0YIr8Ca9Xy4Jky7xTM-JryLAVWtEGpoV7XOda0Jx9WRhw8s45J4ibOsC1uCXHHljWfpqcC1w8wIfofl_RPNcbjjOZLpcFRicA3dYg98vgkekB4oWbf8C6MehR35KNlVvmr8mHdopBTEBxCXTxzs44GfefslTlj5XrrWxGX01b6pQUlRGkB4nC7OjYXRrHO4eXoPie9_W2gKVlFrqzIEF8x-GvxacUwNKEE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h4 class="text-xl font-bold mb-1">Путь открытий</h4>
+<p class="text-sm opacity-90 line-clamp-2">Поощрение независимости через игры на природе.</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-primary mb-3">
+<span class="material-symbols-outlined text-lg">forest</span>
+<span class="text-xs font-bold uppercase tracking-wider">Природа</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Развитие моторики и формирование социальных навыков в группе.</p>
+</div>
+</div>
+<!-- Program Card 3 -->
+<div class="group bg-blue-50/50 dark:bg-blue-950/10 rounded-3xl overflow-hidden card-shadow transition-transform hover:-translate-y-1">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img alt="Творческие ученые" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyKsn5tB4lH7Cs19l3HHovFA2qN4k4aj6XUJdxcCBln0ULID-zl-14557ev4u1V1zrqei7CSrMUyJ5UiJwk838wXJJzTLiHlwR9VvP5x4wAsfIvObN0ONVxlyyIrLuaZlYP8AUMzR1J0WnqLx2ayEFyQW_f29PQzHV5P1qdnLkpOQAz9uYSNjfjuiDbj-nhJaj7_56QGNvPZ7VG_ZNylRg7OZLeDzqbVNeKaHC_-trLuBZCwMtsfUk5NZAjZfwA4A9Jyn_k8GD5Uk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<h4 class="text-xl font-bold mb-1">Творческие ученые</h4>
+<p class="text-sm opacity-90 line-clamp-2">Подготовка к школе через творческое самовыражение.</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-primary mb-3">
+<span class="material-symbols-outlined text-lg">draw</span>
+<span class="text-xs font-bold uppercase tracking-wider">Творчество</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Развитие грамотности и основ математики в игровой форме.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Learning Areas -->
+<section class="px-6 mb-20">
+<div class="bg-soft-cream dark:bg-primary/5 rounded-[3rem] p-8 md:p-14 border border-primary/5">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="max-w-xl">
+<span class="text-accent font-bold uppercase tracking-[0.2em] text-[10px] mb-2 block">Программа обучения</span>
+<h3 class="text-3xl font-bold mt-2 text-slate-900 dark:text-slate-100">Ключевые области обучения</h3>
+<p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Наш сбалансированный подход гарантирует всестороннее развитие каждого ребенка через практический опыт.
+                    </p>
+</div>
+<div class="hidden md:block">
+<img alt="icon" class="size-16 opacity-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfuQzFNuUTR0WP6LAbsVEe-S5C6JMBYKDgz0p3d94KGyvFD3gi_D4o_RQv9Jk4FZ_ljsXApzAp2pd7XBNUADO4thFmFxhtbPiOz4UcS-41XIshuqWDvI4GB-5_710nfg1tp8OzhyCiv3L1MSXXJaz6gKWeO1R4SLZDNMu7n8lD86Hb4PK2ErY3CKlKoetEAt2g0FhyyPY2SQih1jd_XO4kdPo6yWN1gyuKk1-wtWJIjVeM0sC6_iZR2s0NT8PSdV-psKr4GroM2_Y"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="group">
+<div class="size-14 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-accent text-3xl">menu_book</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Язык и грамотность</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Рассказывание историй, фонетика и пополнение словарного запаса через чтение.</p>
+</div>
+<div class="group">
+<div class="size-14 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-accent text-3xl">palette</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Творчество и лепка</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Ежедневные занятия творчеством для развития мелкой моторики и воображения.</p>
+</div>
+<div class="group">
+<div class="size-14 rounded-2xl bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-accent text-3xl">local_florist</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Практическая жизнь</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Развитие навыков самообслуживания и манер через ежедневные дела.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Daily Routine -->
+<section class="px-6 mb-12">
+<h3 class="text-2xl font-bold mb-10 text-center md:text-left">Распорядок дня</h3>
+<div class="max-w-3xl mx-auto space-y-6">
+<!-- Routine Item 1 -->
+<div class="flex items-center gap-6 p-6 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 card-shadow">
+<div class="shrink-0 flex flex-col items-center justify-center w-20 h-20 bg-soft-green/50 rounded-2xl">
+<span class="text-primary font-bold text-sm">08:30</span>
+<span class="text-primary/70 text-[10px] uppercase font-bold">AM</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h5 class="font-bold text-lg">Утренний круг</h5>
+<span class="text-slate-300">|</span>
+<span class="material-symbols-outlined text-accent text-sm">groups</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Приветствие, погода и настрой на день с песнями.</p>
+</div>
+</div>
+<!-- Routine Item 2 -->
+<div class="flex items-center gap-6 p-6 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 card-shadow">
+<div class="shrink-0 flex flex-col items-center justify-center w-20 h-20 bg-blue-50/50 rounded-2xl">
+<span class="text-primary font-bold text-sm">10:00</span>
+<span class="text-primary/70 text-[10px] uppercase font-bold">AM</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h5 class="font-bold text-lg">Активные игры</h5>
+<span class="text-slate-300">|</span>
+<span class="material-symbols-outlined text-accent text-sm">wb_sunny</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Игры на свежем воздухе в нашем защищенном саду.</p>
+</div>
+</div>
+<!-- Routine Item 3 -->
+<div class="flex items-center gap-6 p-6 rounded-3xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 card-shadow">
+<div class="shrink-0 flex flex-col items-center justify-center w-20 h-20 bg-soft-cream rounded-2xl">
+<span class="text-primary font-bold text-sm">11:30</span>
+<span class="text-primary/70 text-[10px] uppercase font-bold">AM</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h5 class="font-bold text-lg">Творчество</h5>
+<span class="text-slate-300">|</span>
+<span class="material-symbols-outlined text-accent text-sm">palette</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Творческие занятия с использованием натуральных материалов.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Illustrative Footer Detail (Inspiration from Image 8) -->
+<div class="px-6 py-12 flex justify-center opacity-40 grayscale">
+<img alt="decoration" class="size-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfSeFo__oQFe3GvOmy1jauxJBtxfYVU5Eh-8iyMWI0focF13ayxWU28ZvTB1G2d-37dkRJfZ2ckMbBPaCOUpoXAsCBpz1L18gSHzx7eUMKNVmPi2fVse3q5Q5Mp8XoTeuQQ_OCym_tKjuB9kTsLhqYjZGOW6GHUfnXGmvqgYKVDgkDWrSOl3fJGrFAt2_KGOmRNZBcsj8KjEJyApCKsXbU2a3Hpk_Bs01UnlIbMjcmeIGOKlj6Zm9vIJt4lyMTQ9p4l07xkjknons"/>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-primary/5 px-4 pb-6 pt-3 md:hidden">
+<div class="flex justify-around items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Главная</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">school</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Программы</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Галерея</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Профиль</span>
+</a>
+</div>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 size-16 bg-accent text-white rounded-full shadow-xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-40 group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">chat_bubble</span>
+</button>
+</body></html>

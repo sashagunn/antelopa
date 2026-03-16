@@ -12,36 +12,38 @@ export function Header() {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/5 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="flex items-center gap-2 group">
-              <img src="/logo.jpg" alt="Antelopa.preschool Logo" className="w-[80px] h-[80px] object-contain rounded-full border border-primary/20" />
+            <a href="#" className="flex items-center gap-3 group">
+              <img src="/logo.jpg" alt="Antelopa.preschool Logo" className="w-[50px] h-[50px] object-cover rounded-full border border-primary/20 bg-primary/10" />
+              <span className="text-xl font-bold tracking-tight text-primary uppercase font-display hidden sm:block">Antelopa</span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#why-us" className="text-text-muted hover:text-primary-dark font-medium transition-colors">{t('nav.whyUs', 'Why Us')}</a>
-            <a href="#programs" className="text-text-muted hover:text-primary-dark font-medium transition-colors">{t('nav.programs', 'Programs')}</a>
-            <a href="#team" className="text-text-muted hover:text-primary-dark font-medium transition-colors">{t('nav.team', 'Our Team')}</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-bold tracking-wide">
+            <a href="#why-us" className="text-slate-600 hover:text-primary transition-colors">{t('nav.whyUs', 'Why Us')}</a>
+            <a href="#programs" className="text-slate-600 hover:text-primary transition-colors">{t('nav.programs', 'Programs')}</a>
+            <a href="#team" className="text-slate-600 hover:text-primary transition-colors">{t('nav.team', 'Our Team')}</a>
             
-            <div className="flex items-center gap-4 border-l border-gray-200 pl-8">
-              <button 
-                onClick={toggleLanguage} 
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-sm font-semibold text-text-main transition-colors"
+            <div className="flex items-center gap-6 border-l border-slate-200 pl-8">
+              <div 
+                className="flex items-center gap-2 text-xs font-bold tracking-widest text-slate-500 cursor-pointer"
+                onClick={toggleLanguage}
               >
-                <Globe className="w-4 h-4 text-primary-dark" />
-                {i18n.language === 'ru' ? 'RU' : 'EN'}
-              </button>
+                <span className={`hover:text-primary transition-colors ${i18n.language === 'en' ? 'text-primary' : ''}`}>EN</span>
+                <span className="text-slate-300">|</span>
+                <span className={`hover:text-primary transition-colors ${i18n.language === 'ru' ? 'text-primary' : ''}`}>RU</span>
+              </div>
               
-              <a href="tel:+19165550123" className="flex items-center text-primary-dark font-medium hover:text-primary transition-colors">
+              <a href="tel:+19165550123" className="hidden lg:flex items-center text-primary font-bold hover:text-primary/80 transition-colors">
                 <Phone className="w-4 h-4 mr-2" />
                 (916) 555-0123
               </a>
-              <Button size="sm">{t('nav.schedule', 'Schedule a Tour')}</Button>
+              <Button size="sm" className="hidden lg:inline-flex">{t('nav.schedule', 'Schedule a Tour')}</Button>
             </div>
           </nav>
 

@@ -44,38 +44,35 @@ export function Programs() {
         subtitle={t('programs.subheading')}
       />
 
-      <div className="grid md:grid-cols-3 gap-8 mt-16 items-start">
+      <div className="grid md:grid-cols-3 gap-10 mt-16 items-start max-w-6xl mx-auto">
         {programs.map((program, index) => (
           <div 
             key={index}
-            className={`flex flex-col overflow-hidden bg-background-alt relative rounded-[4rem] transition-transform duration-500 hover:-translate-y-2 border border-black/5 ${program.featured ? 'shadow-xl' : 'shadow-md'}`}
+            className={`group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-card transition-transform duration-500 hover:-translate-y-2 border border-slate-100 dark:border-slate-700 flex flex-col h-full`}
           >
-            <div className="p-8 pb-0 z-10">
-              <h3 className="text-3xl font-medium text-primary-dark mb-2">{program.title}</h3>
-              <p className="text-text-muted text-sm leading-relaxed mb-6">
-                {program.description}
-              </p>
-            </div>
-            
-            <div className="relative h-64 md:h-80 w-full mt-auto">
-              {/* Organic mask shape for the image */}
-              <div className="absolute inset-0 bg-accent-peach/20"></div>
+            <div className="aspect-[4/5] relative overflow-hidden shrink-0">
               <img 
                 src={program.image} 
                 alt={`${program.title} classroom`} 
-                className="w-full h-full object-cover rounded-b-[4rem]"
+                className="w-full h-full object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-700"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-b-[4rem]"></div>
-              
-              <div className="absolute bottom-8 left-8 right-8">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 text-xs font-medium uppercase tracking-widest mb-3">
+              <div className="absolute bottom-6 left-6 right-6 text-white text-left z-20">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 text-[10px] font-bold uppercase tracking-wider mb-2">
                     {program.age}
                   </div>
-                  <p className="text-white font-medium drop-shadow-md">
-                    {program.outcome}
-                  </p>
+                  <h3 className="text-2xl font-bold font-display shadow-sm">{program.title}</h3>
               </div>
+            </div>
+
+            <div className="p-6 md:p-8 flex-1 flex flex-col items-start text-left bg-soft-cream/30 dark:bg-slate-800/50">
+              <div className="flex items-center gap-2 text-primary mb-3">
+                <span className="text-xs font-bold uppercase tracking-wider">{program.outcome}</span>
+              </div>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                {program.description}
+              </p>
             </div>
           </div>
         ))}

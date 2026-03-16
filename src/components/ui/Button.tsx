@@ -19,19 +19,19 @@ export function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseStyles = 'inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variants = {
-    primary: 'bg-accent-terracotta text-white hover:bg-opacity-90 hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:ring-accent-terracotta',
-    secondary: 'bg-primary-dark text-white hover:bg-opacity-90 hover:shadow-md focus:ring-primary-dark',
-    outline: 'border-2 border-primary-light text-primary-dark hover:border-accent-terracotta hover:text-accent-terracotta focus:ring-accent-terracotta bg-white',
-    ghost: 'text-text-muted hover:text-primary-dark hover:bg-background-alt focus:ring-primary-dark',
+    primary: 'bg-accent text-white hover:bg-accent/90 hover:-translate-y-0.5 shadow-md hover:shadow-lg focus:ring-accent',
+    secondary: 'bg-primary text-white hover:bg-primary/90 hover:shadow-md focus:ring-primary',
+    outline: 'border-2 border-slate-200 text-slate-700 hover:border-accent hover:text-accent focus:ring-accent bg-white',
+    ghost: 'text-text-muted hover:text-primary hover:bg-background-alt focus:ring-primary',
   };
 
   const sizes = {
     sm: 'px-5 py-2.5 text-sm',
     md: 'px-8 py-3.5 text-base',
-    lg: 'px-10 py-4 text-lg font-medium',
+    lg: 'px-10 py-4 text-lg font-bold',
   };
 
   return (

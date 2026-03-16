@@ -30,36 +30,40 @@ export function Testimonials() {
 
   return (
     <Section id="testimonials" variant="white">
-      <SectionHeader 
-        titleHtml={t('testimonials.heading')}
-        subtitle={t('testimonials.subtitle')}
-      />
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionHeader 
+          titleHtml={t('testimonials.heading')}
+          subtitle={t('testimonials.subtitle')}
+        />
 
-      <div className="grid md:grid-cols-3 gap-8 mt-16">
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-background rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col relative">
-            
-            {/* Quote Icon Background */}
-            <div className="absolute top-6 right-6 text-9xl text-accent-gold opacity-10 font-serif leading-none">"</div>
-            
-            <div className="flex gap-1 mb-6 relative z-10">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent-gold text-accent-gold" />
-              ))}
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-soft-cream/30 dark:bg-slate-800 rounded-[3rem] p-10 shadow-card border border-slate-100 dark:border-slate-700 flex flex-col relative transform hover:-translate-y-2 transition-transform duration-500">
+              
+              {/* Quote Icon Background */}
+              <div className="absolute top-8 right-8 text-9xl text-accent opacity-10 font-display leading-none">"</div>
+              
+              <div className="flex gap-1 mb-8 relative z-10">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              
+              <p className="text-slate-700 dark:text-slate-300 italic leading-relaxed mb-10 flex-grow relative z-10 text-lg font-medium">
+                "{testimonial.quote}"
+              </p>
+              
+              <div className="relative z-10 border-t border-slate-200 dark:border-slate-600 pt-6 mt-auto">
+                <p className="font-display font-bold text-slate-900 text-xl mb-1">{testimonial.name}</p>
+                <div className="flex items-center gap-2 text-sm text-slate-500 mb-1">
+                   <span className="font-bold uppercase tracking-wider">{testimonial.location}</span>
+                </div>
+                <p className="text-xs text-primary font-bold">{testimonial.program}</p>
+              </div>
+              
             </div>
-            
-            <p className="text-text-main italic leading-relaxed mb-8 flex-grow relative z-10 text-lg">
-              "{testimonial.quote}"
-            </p>
-            
-            <div className="relative z-10">
-              <p className="font-serif font-bold text-primary-dark text-lg">{testimonial.name}</p>
-              <p className="text-sm font-medium text-text-muted">{testimonial.location}</p>
-              <p className="text-xs text-primary mt-1">{testimonial.program}</p>
-            </div>
-            
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </Section>
   );
