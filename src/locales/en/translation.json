@@ -186,5 +186,20 @@
     "email": "Email Address",
     "submit": "See Pricing & Openings",
     "note": "No commitment required. We'll email you a link to choose a tour time."
+  },
+  "safety": {
+    "heading": "We Treat Their <br/><span class='text-highlight'>Safety</span> as Our Highest Calling",
+    "subtitle": "You'll know how your child is doing throughout the day with real-time updates, photos, and clear communication protocols.",
+    "f1Title": "Daily Updates via Cloud",
+    "f1Desc": "Get photos and meal updates sent directly to your phone throughout the day. Never wonder how they are doing.",
+    "f2Title": "Strict Secure Entry",
+    "f2Desc": "Doors are locked 24/7. Access is only granted to authorized family members via personalized PIN codes.",
+    "f3Title": "Clinical-Grade Sanitization",
+    "f3Desc": "Toys are sanitized daily, and high-touch surfaces are cleaned frequently to prevent the spread of germs.",
+    "f4Title": "Clear Sick Child Policies",
+    "f4Desc": "We strictly enforce our wellness policy to protect all children. If a child is sick, they stay home.",
+    "appTag": "Just now via Cloud Gallery",
+    "appMsg": "Leo just finished his lunch! 🍎",
+    "cta": "Learn About Our Safety Protocols"
   }
 }

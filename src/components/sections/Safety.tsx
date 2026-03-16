@@ -3,28 +3,31 @@ import { Section } from '../ui/Section';
 import { SectionHeader } from '../ui/SectionHeader';
 import { Button } from '../ui/Button';
 import { Smartphone, Lock, Sparkles, AlertTriangle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Safety() {
+  const { t } = useTranslation();
+
   const safetyFeatures = [
     {
       icon: Smartphone,
-      title: 'Daily Updates via Brightwheel',
-      description: 'Get photos, nap times, and meal updates sent directly to your phone throughout the day. Never wonder how they are doing.'
+      title: t('safety.f1Title'),
+      description: t('safety.f1Desc')
     },
     {
       icon: Lock,
-      title: 'Strict Secure Entry',
-      description: 'Doors are locked 24/7. Access is only granted to authorized family members via personalized PIN codes and fingerprint verification.'
+      title: t('safety.f2Title'),
+      description: t('safety.f2Desc')
     },
     {
       icon: Sparkles,
-      title: 'Clinical-Grade Sanitization',
-      description: 'Toys are sanitized daily, and high-touch surfaces are cleaned frequently to prevent the spread of germs. We maintain a spotless environment.'
+      title: t('safety.f3Title'),
+      description: t('safety.f3Desc')
     },
     {
       icon: AlertTriangle,
-      title: 'Clear Sick Child Policies',
-      description: 'We strictly enforce our wellness policy to protect all children. If a child is sick, they stay home. No exceptions, for everyone\'s peace of mind.'
+      title: t('safety.f4Title'),
+      description: t('safety.f4Desc')
     }
   ];
 
@@ -46,9 +49,10 @@ export function Safety() {
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                 <Smartphone className="w-6 h-6 text-blue-600" />
               </div>
+
               <div>
-                <p className="text-xs text-gray-500 font-medium">Just now via Brightwheel</p>
-                <p className="text-sm font-semibold text-gray-900">Leo just finished his lunch! 🍎</p>
+                <p className="text-xs text-gray-500 font-medium">{t('safety.appTag')}</p>
+                <p className="text-sm font-semibold text-gray-900">{t('safety.appMsg')}</p>
               </div>
             </div>
           </div>
@@ -57,8 +61,8 @@ export function Safety() {
         {/* Content Side */}
         <div className="lg:w-1/2">
           <SectionHeader 
-            title="We Treat Their Safety as Our Highest Calling"
-            subtitle="You'll know how your child is doing throughout the day with real-time updates, photos, and clear communication protocols."
+            titleHtml={t('safety.heading')}
+            subtitle={t('safety.subtitle')}
             centered={false}
           />
 
@@ -78,7 +82,7 @@ export function Safety() {
             ))}
           </div>
 
-          <Button size="lg">Learn About Our Safety Protocols</Button>
+          <Button size="lg">{t('safety.cta')}</Button>
         </div>
 
       </div>
