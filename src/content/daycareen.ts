@@ -1,4 +1,4 @@
-{
+export const daycareen = {
   "nav": {
     "whyUs": "Why Us",
     "programs": "Programs",
@@ -202,4 +202,4 @@
     "appMsg": "Leo just finished his lunch! 🍎",
     "cta": "Learn About Our Safety Protocols"
   }
-}
+};
