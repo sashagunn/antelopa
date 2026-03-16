@@ -39,10 +39,11 @@ export function Safety() {
         <div className="lg:w-1/2 w-full relative">
           <div className="absolute inset-0 bg-soft-green/50 rounded-[4rem] transform rotate-3 scale-105 -z-10"></div>
           <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
+            <div className="absolute inset-0 bg-accent/20 z-0 mix-blend-multiply"></div>
             <img 
-              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
-              alt="Caregiver updating parent via tablet" 
-              className="w-full h-auto object-cover aspect-4/3"
+              src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=800&auto=format&fit=crop" 
+              alt="Clean and safe classroom environment" 
+              className="w-full h-full object-cover relative z-10"
             />
             {/* Overlay App Notification */}
             <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur rounded-2xl p-4 shadow-xl flex items-center gap-4 animate-pulse border border-primary/5" style={{ animationDuration: '4s' }}>

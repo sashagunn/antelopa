@@ -8,7 +8,7 @@ export function Gallery() {
 
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop',
+      url: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop',
       alt: t('gallery.img1'),
       span: 'md:col-span-2 md:row-span-2'
     },
@@ -23,12 +23,12 @@ export function Gallery() {
       span: 'md:col-span-1 md:row-span-1'
     },
     {
-      url: 'https://images.unsplash.com/photo-1584697964190-7cb83eec19b4?q=80&w=800&auto=format&fit=crop',
+      url: 'https://images.unsplash.com/photo-1544257139-39b1a0eacac3?q=80&w=800&auto=format&fit=crop',
       alt: t('gallery.img4'),
       span: 'md:col-span-1 md:row-span-1'
     },
     {
-      url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop',
+      url: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop',
       alt: t('gallery.img5'),
       span: 'md:col-span-1 md:row-span-1'
     }

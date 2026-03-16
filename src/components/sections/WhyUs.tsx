@@ -67,7 +67,7 @@ export function WhyUs() {
           {/* Right: Abstract Card/Shape Component */}
           <div className="lg:col-span-5 relative">
               <div className="aspect-[4/5] bg-soft-cream rounded-[4rem] shadow-2xl border-8 border-white dark:border-slate-800 flex flex-col justify-center text-center p-12 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590082871875-0642faeb2ff4?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-700"></div>
                   
                   <div className="relative z-10 space-y-6 bg-white/40 dark:bg-slate-900/40 backdrop-blur-md p-8 rounded-3xl border border-white/50">
                     <h3 className="font-display text-3xl md:text-4xl font-bold text-primary" dangerouslySetInnerHTML={{ __html: t('whyUs.boxTitle') }} />

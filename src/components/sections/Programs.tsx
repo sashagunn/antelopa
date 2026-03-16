@@ -10,30 +10,42 @@ export function Programs() {
     {
       title: t('programs.infantTitle'),
       age: t('programs.infantAge'),
-      painPoint: 'Worried about leaving your baby?',
       outcome: t('programs.infantOutcome'),
       description: t('programs.infantDesc'),
-      image: 'https://images.unsplash.com/photo-1544126592-807ade215a0b?q=80&w=800&auto=format&fit=crop',
-      color: 'bg-accent-blue/10 border-accent-blue/20'
+      image: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=800&auto=format&fit=crop',
+      color: 'bg-accent-blue/10 border-accent-blue/20',
+      features: [
+        t('programs.infantF1'),
+        t('programs.infantF2'),
+        t('programs.infantF3')
+      ]
     },
     {
       title: t('programs.toddlerTitle'),
       age: t('programs.toddlerAge'),
-      painPoint: 'Concerned about socialization and tantrums?',
       outcome: t('programs.toddlerOutcome'),
       description: t('programs.toddlerDesc'),
-      image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=800&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop',
       color: 'bg-primary-light border-primary/20',
-      featured: true
+      featured: true,
+      features: [
+        t('programs.toddlerF1'),
+        t('programs.toddlerF2'),
+        t('programs.toddlerF3')
+      ]
     },
     {
       title: t('programs.prekTitle'),
       age: t('programs.prekAge'),
-      painPoint: 'Will they be ready for kindergarten?',
       outcome: t('programs.prekOutcome'),
       description: t('programs.prekDesc'),
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop',
-      color: 'bg-accent-gold/10 border-accent-gold/20'
+      image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=800&auto=format&fit=crop',
+      color: 'bg-accent-gold/10 border-accent-gold/20',
+      features: [
+        t('programs.prekF1'),
+        t('programs.prekF2'),
+        t('programs.prekF3')
+      ]
     }
   ];
 
